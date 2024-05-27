@@ -1,10 +1,11 @@
 <!-- ========== HEADER ========== -->
-<header class="sticky top-4 mx-auto flex flex-wrap md:justify-center md:flex-nowrap z-50 w-full">
-  <nav class="relative max-w-[75rem] w-full bg-neutral-100 rounded-[28px] py-3 ps-5 pe-2 md:flex md:items-center md:justify-between md:py-0 lg:mx-auto" aria-label="Global">
+<header class="sticky top-4 mx-auto flex flex-wrap md:justify-center md:flex-nowrap z-50 w-[95vw]">
+  <nav class="relative max-w-[75rem] w-full bg-neutral-100 dark:bg-slate-700 rounded-[28px] py-3 ps-5 pe-2 md:flex md:items-center md:justify-between md:py-0 lg:mx-auto outline outline-2 outline-offset-2 outline-slate-100" aria-label="Global">
     <div class="flex items-center justify-between w-full">
       <!-- Logo -->
-      <a class="flex flex-row items-center rounded-md text-xl font-thin focus:outline-none focus:opacity-80" href="../templates/agency/index.html">
-        <img src="{{ 'assets/images/logo.png'| theme }}" alt="" class="w-10 mr-3">
+      <a class="flex flex-row items-center rounded-md text-xl font-thin focus:outline-none focus:opacity-80 dark:text-slate-100" href="../templates/agency/index.html">
+        <img src="{{ 'assets/images/logo.png'| theme }}" alt="" class="w-10 mr-3 dark:hidden">
+        <img src="{{ 'assets/images/logo-alt.png'| theme }}" alt="" class="w-10 mr-3 hidden dark:block">
         <span>The <strong class="font-bold">Website</strong> Guy</span>
       </a>
       <!-- End Logo -->
