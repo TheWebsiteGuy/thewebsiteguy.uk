@@ -36,7 +36,7 @@
         "winter/wn-cms-module": "dev-develop",
         "laravel/framework": "^9.1",
         "wikimedia/composer-merge-plugin": "~2.1.0",
-        "winter/wn-blog-plugin": "^2.1",
+        "winter/wn-blog-plugin": "^2.1.1",
         "winter/wn-pages-plugin": "^2.1"
     },
     "require-dev": {
