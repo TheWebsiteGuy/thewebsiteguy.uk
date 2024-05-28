@@ -1,0 +1,27 @@
+description = "Static layout"
+
+[staticMenu]
+
+[staticBreadcrumbs]
+
+[staticPage]
+useContent = 1
+default = 0
+
+[staticPage staticPage2]
+useContent = 1
+default = 0
+==
+{% partial "html/head" %}
+
+    {% partial 'site/navBar.htm' %}     
+
+    <main class="max-w-screen-2xl mx-6 my-10">
+        <article class="prose prose-lg max-w-none">
+            {% component 'staticPage' %}
+        </article>
+    </main>
+
+    {% partial 'site/footer' %}
+
+{% partial "html/foot" %}

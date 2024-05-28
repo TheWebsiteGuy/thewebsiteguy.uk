@@ -229,11 +229,10 @@
                         >
                     </p>
                     <p>
-                        <a
-                            class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
-                            href="#"
-                            >07306 043 813</a
-                        >
+                        <a class="group inline-flex items-center gap-x-2 font-medium text-sm text-pink-500 decoration-2 hover:underline focus:outline-none focus:underline" href="https://calendar.google.com/calendar/u/0/appointments/AcZssZ0xtVfqF2blgLyaxcqqgAatMA-QeMbSVudhC_E=">
+                Book a call
+                <svg class="flex-shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5 " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
                     </p>
                 </div>
             </div>
@@ -247,12 +246,12 @@
                     <div class="space-x-4 text-sm ms-4">
                         <a
                             class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
-                            href="#"
+                            href="{{ url('/') }}/legal/terms"
                             >Terms</a
                         >
                         <a
                             class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
-                            href="#"
+                            href="{{ url('/') }}/legal/privacy"
                             >Privacy</a
                         >
                         <a
@@ -274,7 +273,7 @@
                         <p
                             class="mt-1 text-xs sm:text-sm text-gray-600 dark:text-neutral-400"
                         >
-                            © 2022 Preline.
+                            &copy; {{ "now" | date("Y") }} The Website Guy.
                         </p>
                     </div>
 
