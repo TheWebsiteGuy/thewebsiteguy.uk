@@ -1576,6 +1576,9 @@ select {
 .max-w-\[85rem\] {
   max-width: 85rem;
 }
+.max-w-none {
+  max-width: none;
+}
 .max-w-screen-2xl {
   max-width: 1536px;
 }
@@ -1590,9 +1593,6 @@ select {
 }
 .max-w-xs {
   max-width: 20rem;
-}
-.max-w-none {
-  max-width: none;
 }
 .flex-none {
   flex: none;
