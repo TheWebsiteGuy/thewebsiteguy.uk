@@ -5,7 +5,6 @@ is_hidden = 0
 
 [blogPosts articlePosts]
 pageNumber = "{{ :page }}"
-categoryFilter = "legal"
 postsPerPage = 9
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
@@ -16,14 +15,14 @@ postPage = "articles/post"
     <div class="container max-w-screen-xl">
         <div class="block lg:flex lg:flex-row divide-x divide-gray-100">
             <div class="flew-grow-0 px-8 lg:w-2/12 xl:pr-0">
-                {% partial 'blog/category-list' %}
+                {% partial 'articles/category-list' %}
             </div>
 
             <div class="flex-grow-0 px-8 mt-16 lg:w-10/12 lg:mt-0">
                 {% if articlePosts.posts|length > 0 %}
                     <div class="grid grid-cols-3 gap-6">
                         {% for post in articlePosts.posts %}
-                            {% partial 'blog/post-listing' post=post %}
+                            {% partial 'articles/post-listing' post=post %}
                         {% endfor %}
                     </div>
                 {% else %}
