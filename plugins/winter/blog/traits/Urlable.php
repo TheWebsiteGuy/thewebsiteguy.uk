@@ -63,7 +63,7 @@ trait Urlable
         $localRecord = clone $this;
         $localRecord->translateContext($locale);
 
-        $localeUrl = $page->getViewBagUrlAttributeTranslated($locale);
+        $localeUrl = $page->getViewBagUrlAttributeTranslated($locale) ?: $page->url;
 
         $params = $localRecord->getUrlParams($page);
         $url = $translator->getPathInLocale($localeUrl, $locale);
@@ -78,14 +78,9 @@ trait Urlable
     {
         $localizedUrls = [];
         $enabledLocales = class_exists(Locale::class) ? Locale::listEnabled() : [];
-        $defaultLocale = class_exists(Locale::class) ? Locale::getDefault()->code : App::getLocale();
 
         foreach ($enabledLocales as $locale => $name) {
-            if ($locale === $defaultLocale) {
-                $url = $this->getUrl($page);
-            } else {
-                $url = $this->getLocalizedUrl($locale, $page);
-            }
+            $url = $this->getLocalizedUrl($locale, $page);
 
             if ($absolute) {
                 $url = Url::to($url);

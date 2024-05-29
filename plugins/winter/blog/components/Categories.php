@@ -17,12 +17,12 @@ class Categories extends ComponentBase
     /**
      * Reference to the page name for linking to categories.
      */
-    public string $categoryPage = '';
+    public ?string $categoryPage = '';
 
     /**
      * Reference to the current category slug.
      */
-    public string $currentCategorySlug = '';
+    public ?string $currentCategorySlug = '';
 
     public function componentDetails(): array
     {
@@ -63,14 +63,11 @@ class Categories extends ComponentBase
     }
 
     public function onRun()
-{
-    // Get the slug, defaulting to an empty string if it's null
-    $slug = $this->property('slug') ?: '';  // Null coalescing operator
-
-    $this->currentCategorySlug = $this->page['currentCategorySlug'] = $slug; 
-    $this->categoryPage = $this->page['categoryPage'] = $this->property('categoryPage');
-    $this->categories = $this->page['categories'] = $this->loadCategories();
-}
+    {
+        $this->currentCategorySlug = $this->page['currentCategorySlug'] = $this->property('slug');
+        $this->categoryPage = $this->page['categoryPage'] = $this->property('categoryPage');
+        $this->categories = $this->page['categories'] = $this->loadCategories();
+    }
 
     /**
      * Load all categories or, depending on the <displayEmpty> option, only those that have blog posts

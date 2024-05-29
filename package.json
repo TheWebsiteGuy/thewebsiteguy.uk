@@ -13,7 +13,8 @@
         "packages": [
             "modules/backend",
             "modules/system",
-            "themes/websiteguy"
+            "themes/websiteguy",
+            "themes/workshop"
         ],
         "ignoredPackages": []
     },

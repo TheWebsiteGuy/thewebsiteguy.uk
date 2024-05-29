@@ -5,6 +5,7 @@ namespace Winter\Blog\Components;
 use BackendAuth;
 use Cms\Classes\ComponentBase;
 use Cms\Classes\Page;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Lang;
 use Redirect;
 use Winter\Blog\Models\Category as BlogCategory;
@@ -17,52 +18,38 @@ class Posts extends ComponentBase
 {
     /**
      * A collection of posts to display
-     *
-     * @var Collection
      */
-    public $posts;
+    public LengthAwarePaginator|Collection|null $posts;
 
     /**
      * Parameter to use for the page number
-     *
-     * @var string
      */
-    public $pageParam;
+    public ?string $pageParam;
 
     /**
      * If the post list should be filtered by a category, the model to use
-     *
-     * @var Model
      */
-    public $category;
+    public ?BlogCategory $category;
 
     /**
      * Message to display when there are no messages
-     *
-     * @var string
      */
-    public $noPostsMessage;
+    public ?string $noPostsMessage;
 
     /**
      * Reference to the page name for linking to posts
-     *
-     * @var string
      */
-    public $postPage;
+    public ?string $postPage;
 
     /**
      * Reference to the page name for linking to categories
-     *
-     * @var string
      */
-    public $categoryPage;
+    public ?string $categoryPage;
 
     /**
      * If the post list should be ordered by another attribute
-     *
-     * @var string
      */
-    public $sortOrder;
+    public ?string $sortOrder;
 
     public function componentDetails()
     {
@@ -178,6 +165,10 @@ class Posts extends ComponentBase
 
             if ($currentPage > ($lastPage = $this->posts->lastPage()) && $currentPage > 1) {
                 return Redirect::to($this->currentPageUrl([$pageNumberParam => $lastPage]));
+            }
+
+            if (!is_null($currentPage) && $currentPage < 1) {
+                return Redirect::to($this->currentPageUrl([$pageNumberParam => 1]));
             }
         }
     }

@@ -1,4 +1,5 @@
 static-pages:
-    legal-terms:
-        legal-terms-2: {  }
-        legal-privacy: {  }
+    legal:
+        legal-terms-and-conditions: {  }
+        legal-privacy-policy: {  }
+        legal-acceptable-use-policy: {  }
