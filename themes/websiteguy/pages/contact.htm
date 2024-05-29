@@ -1,8 +1,20 @@
----
 title = "Contact"
 url = "/contact"
 layout = "default"
----
+is_hidden = 0
+
+[emptyForm contactForm]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+mail_enabled = 1
+mail_recipients[] = "patrick@thewebsiteguy.uk"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
 ==
 <!-- Contact -->
 <div class="">
@@ -17,18 +29,23 @@ layout = "default"
     <!-- Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16">
       <div class="md:order-2 border-b border-slate-600 pb-10 mb-10 md:border-b-0 md:pb-0 md:mb-0">
-        <form>
+
+      {{ form_ajax(contactForm ~ '::onFormSubmit', { id: contactForm }) }}
+
+    {{ form_token() }}
+
+    <form>
           <div class="space-y-4">
             <!-- Input -->
             <div class="relative">
-              <input type="text" id="hs-tac-input-name" class="peer p-4 block w-full bg-slate-600 border-transparent rounded-lg text-sm text-slate-800 dark:text-slate-100 placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+              <input type="text" id="name" name="name" class="peer p-4 block w-full bg-slate-600 border-transparent rounded-lg text-sm text-slate-800 dark:text-slate-100 placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
               focus:pt-6
               focus:pb-2
               [&:not(:placeholder-shown)]:pt-6
               [&:not(:placeholder-shown)]:pb-2
               autofill:pt-6
               autofill:pb-2" placeholder="Name">
-              <label for="hs-tac-input-name" class="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
+              <label for="name" class="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
                 peer-focus:text-xs
                 peer-focus:-translate-y-1.5
                 peer-focus:text-neutral-400
@@ -40,14 +57,14 @@ layout = "default"
 
             <!-- Input -->
             <div class="relative">
-              <input type="email" id="hs-tac-input-email" class="peer p-4 block w-full bg-slate-600 border-transparent rounded-lg text-sm text-slate-800 dark:text-slate-100 placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+              <input type="email" id="email" name="email" class="peer p-4 block w-full bg-slate-600 border-transparent rounded-lg text-sm text-slate-800 dark:text-slate-100 placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
               focus:pt-6
               focus:pb-2
               [&:not(:placeholder-shown)]:pt-6
               [&:not(:placeholder-shown)]:pb-2
               autofill:pt-6
               autofill:pb-2" placeholder="Email">
-              <label for="hs-tac-input-email" class="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
+              <label for="email" class="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
                 peer-focus:text-xs
                 peer-focus:-translate-y-1.5
                 peer-focus:text-neutral-400
@@ -59,14 +76,14 @@ layout = "default"
 
             <!-- Input -->
             <div class="relative">
-              <input type="text" id="hs-tac-input-company" class="peer p-4 block w-full bg-slate-600 border-transparent rounded-lg text-sm text-slate-800 dark:text-slate-100 placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+              <input type="text" id="company" name="company" class="peer p-4 block w-full bg-slate-600 border-transparent rounded-lg text-sm text-slate-800 dark:text-slate-100 placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
               focus:pt-6
               focus:pb-2
               [&:not(:placeholder-shown)]:pt-6
               [&:not(:placeholder-shown)]:pb-2
               autofill:pt-6
               autofill:pb-2" placeholder="Company">
-              <label for="hs-tac-input-company" class="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
+              <label for="company" class="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
                 peer-focus:text-xs
                 peer-focus:-translate-y-1.5
                 peer-focus:text-neutral-400
@@ -78,14 +95,14 @@ layout = "default"
 
             <!-- Input -->
             <div class="relative">
-              <input type="text" id="hs-tac-input-phone" class="peer p-4 block w-full bg-slate-600 border-transparent rounded-lg text-sm text-slate-800 dark:text-slate-100 placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+              <input type="text" id="phone" name="phone" class="peer p-4 block w-full bg-slate-600 border-transparent rounded-lg text-sm text-slate-800 dark:text-slate-100 placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
               focus:pt-6
               focus:pb-2
               [&:not(:placeholder-shown)]:pt-6
               [&:not(:placeholder-shown)]:pb-2
               autofill:pt-6
               autofill:pb-2" placeholder="Phone">
-              <label for="hs-tac-input-phone" class="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
+              <label for="phone" class="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
                 peer-focus:text-xs
                 peer-focus:-translate-y-1.5
                 peer-focus:text-neutral-400
@@ -97,14 +114,14 @@ layout = "default"
 
             <!-- Textarea -->
             <div class="relative">
-              <textarea id="hs-tac-message" class="peer p-4 block w-full bg-slate-600 border-transparent rounded-lg text-sm text-slate-800 dark:text-slate-100 placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+              <textarea id="message" name="message" class="peer p-4 block w-full bg-slate-600 border-transparent rounded-lg text-sm text-slate-800 dark:text-slate-100 placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
               focus:pt-6
               focus:pb-2
               [&:not(:placeholder-shown)]:pt-6
               [&:not(:placeholder-shown)]:pb-2
               autofill:pt-6
               autofill:pb-2" placeholder="This is a textarea placeholder"></textarea>
-              <label for="hs-tac-message" class="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
+              <label for="message" class="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
                 peer-focus:text-xs
                 peer-focus:-translate-y-1.5
                 peer-focus:text-neutral-400
@@ -121,13 +138,15 @@ layout = "default"
             </p>
 
             <p class="mt-5">
-              <a class="group inline-flex items-center gap-x-2 py-2 px-3 bg-white outline outline-4 outline-pink-500 font-medium text-sm text-slate-600 rounded-full focus:outline-none" href="#">
+              <button id="contactFormSubmit" type="submit" class="group inline-flex items-center gap-x-2 py-2 px-3 bg-white outline outline-4 outline-pink-500 font-medium text-sm text-slate-600 rounded-full focus:outline-none" href="#">
                 Submit
                 <svg class="flex-shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5 " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </a>
+              </button>
             </p>
           </div>
         </form>
+{{ form_close() }}
+        
       </div>
       <!-- End Col -->
 
