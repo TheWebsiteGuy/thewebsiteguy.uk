@@ -1,3 +1,4 @@
+---
 title = "Contact"
 url = "/contact"
 layout = "default"
@@ -15,6 +16,7 @@ recaptcha_theme = "light"
 recaptcha_type = "image"
 recaptcha_size = "normal"
 emails_date_format = "Y-m-d"
+---
 ==
 <!-- Contact -->
 <div class="">
@@ -138,7 +140,7 @@ emails_date_format = "Y-m-d"
             </p>
 
             <p class="mt-5">
-              <button id="contactFormSubmit" type="submit" class="group inline-flex items-center gap-x-2 py-2 px-3 bg-white outline outline-4 outline-pink-500 font-medium text-sm text-slate-600 rounded-full focus:outline-none" href="#">
+              <button id="contactFormSubmit" type="submit" class="group inline-flex items-center gap-x-2 py-2 px-3 bg-white outline outline-2 outline-pink-500 font-medium text-sm text-slate-600 rounded-full focus:outline-none" href="#">
                 Submit
                 <svg class="flex-shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5 " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </button>
@@ -159,6 +161,7 @@ emails_date_format = "Y-m-d"
 
             <address class="mt-1 text-neutral-400 text-sm not-italic">
               Falconer Road<br>
+              3 Grove Cottages <br>
               Bushey, Herts WD23 3AE
             </address>
           </div>
@@ -187,10 +190,20 @@ emails_date_format = "Y-m-d"
             <h4 class="text-slate-800 dark:text-slate-100 font-semibold">Phone:</h4>
             <p class="mt-1 text-neutral-400">Want to chat the old fashioned way?  </p>
             <p class="mt-2">
-              <a class="group inline-flex items-center gap-x-2 font-medium text-sm text-pink-500 decoration-2 hover:underline focus:outline-none focus:underline" href="https://calendar.google.com/calendar/u/0/appointments/AcZssZ0xtVfqF2blgLyaxcqqgAatMA-QeMbSVudhC_E=">
-                Book a call
-                <svg class="flex-shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5 " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </a>
+              <button
+                            class="group inline-flex items-center gap-x-2 font-medium text-sm text-pink-500 decoration-2 hover:underline focus:outline-none focus:underline"
+                            href="https://calendar.google.com/calendar/u/0/appointments/AcZssZ0xtVfqF2blgLyaxcqqgAatMA-QeMbSVudhC_E="
+                            data-hs-overlay="#book-a-call"
+                        >
+                            <svg class="w-4" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"></path>
+</svg>
+                            
+                            Book a call
+                            
+                        </button>
+                    </p>
+                    {# Modal #} {% partial 'modals/book-a-call' %}
             </p>
           </div>
         </div>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b190d933292acfd14ef1e376716ea868",
+    "content-hash": "3788447867c7d2319efc0bd6af08e634",
     "packages": [
         {
             "name": "assetic/framework",
@@ -6842,6 +6842,78 @@
                 }
             ],
             "time": "2024-04-03T17:29:53+00:00"
+        },
+        {
+            "name": "winter/wn-sitemap-plugin",
+            "version": "v2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wintercms/wn-sitemap-plugin.git",
+                "reference": "6bdc29ba41ec82d8cce31bd1dd423d909edcf138"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wintercms/wn-sitemap-plugin/zipball/6bdc29ba41ec82d8cce31bd1dd423d909edcf138",
+                "reference": "6bdc29ba41ec82d8cce31bd1dd423d909edcf138",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=7.2"
+            },
+            "replace": {
+                "rainlab/sitemap-plugin": "~1.0"
+            },
+            "type": "winter-plugin",
+            "extra": {
+                "installer-name": "sitemap"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexey Bobkov",
+                    "email": "aleksey.bobkov@gmail.com",
+                    "role": "Original Author"
+                },
+                {
+                    "name": "Samuel Georges",
+                    "email": "daftspunky@gmail.com",
+                    "role": "Original Author"
+                },
+                {
+                    "name": "Winter CMS Maintainers",
+                    "homepage": "https://wintercms.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Sitemap plugin for Winter CMS",
+            "homepage": "https://github.com/wintercms/wn-sitemap-plugin",
+            "keywords": [
+                "Sitemap",
+                "cms",
+                "plugin",
+                "winter",
+                "winter cms"
+            ],
+            "support": {
+                "discord": "https://discord.gg/D5MFSPH6Ux",
+                "issues": "https://github.com/wintercms/wn-sitemap-plugin/issues",
+                "source": "https://github.com/wintercms/wn-sitemap-plugin"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/wintercms",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/wintercms",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2023-04-15T03:39:31+00:00"
         },
         {
             "name": "winter/wn-system-module",

@@ -5,7 +5,7 @@ layout = "default"
 ---
 ==
 <section class="relative flex items-center w-full ">
-  <div class="relative items-center w-full px-5 py-14 mx-auto lg:px-16 lg:py-36 max-w-7xl md:px-12">
+  <div class="relative items-center w-full px-5 py-14 mx-auto lg:px-10 xl:py-36 max-w-7xl md:px-12">
     <div class="relative flex-col items-start m-auto align-middle">
       <div class="grid grid-cols-1 gap-6 lg:gap-24 lg:grid-cols-2">
         <div class="relative items-center gap-12 m-auto lg:inline-flex">
@@ -27,9 +27,9 @@ layout = "default"
 
                 <span class="ml-3">Get started</span></a>
               <p class="text-slate-500">
-              <a href="" class="underline underline-offset-4 decoration-dotted">
+              <button data-hs-overlay="#book-a-call" type="button" class="underline underline-offset-4 decoration-dotted">
               
-                Book a free consultation</a>
+                Book a free consultation</button>
               </p>
             </div>
             <div class="flex flex-col gap-3 mt-12 lg:flex-row divide-slate-400 lg:divide-x-2">
@@ -170,3 +170,6 @@ layout = "default"
 <section>
   {% partial 'site/faq' %}
 </section>
+
+{# Modal #} 
+{% partial 'modals/book-a-call' %}
