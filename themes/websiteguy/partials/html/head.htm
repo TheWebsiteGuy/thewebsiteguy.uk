@@ -1,24 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" class="dark:bg-slate-800 dark:text-slate-100">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% placeholder page_title default %}{{ this.page.title }}{% endplaceholder %} | The Website Guy</title>
-        {% partial "meta/styles" %}
-        {% partial "meta/seo" %}
-        {# Google Font #}
-         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <meta name="description" content="Professional and afdfordable pay monthly websites from The Website Guy">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Primary Meta Tags -->
+        {% if this.page.meta_title %}
+        <title>{{ this.page.meta_title }}</title>
+        {% else %}
+        <title>
+            {% placeholder page_title default %}{{ this.page.title }}{%
+            endplaceholder %} | The Website Guy
+        </title>
+        {% endif %}
+        <meta name="description" content="{{ this.page.meta_description }}" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="{{ this.page.meta_title }}" />
+        <meta
+            property="og:description"
+            content="{{ this.page.meta_description }}"
+        />
+        <meta property="og:image" content="{{ this.page.meta_image }}" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://thewebsiteguy.uk" />
+        <meta property="twitter:title" content="{{ this.page.meta_title }}" />
+        <meta
+            property="twitter:description"
+            content="{{ this.page.meta_description }}"
+        />
+        <meta property="twitter:image" content="{{ this.page.meta_image }}" />
+        {% partial "meta/styles" %} {% partial "meta/seo" %} {# Google Font #}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <meta
+            name="description"
+            content="Professional and afdfordable pay monthly websites from The Website Guy"
+        />
     </head>
-    {% set pageId = this.page.id %}
-    {% set pageTitle = this.page.title %}
-    {% if pageId is empty %}
-        {% set pageId = page.id %}
-    {% endif %}
-    {% if pageTitle is empty %}
-        {% set pageTitle = page.title %}
-    {% endif %}
-    <body class="page-{{ pageId }} layout-{{ this.layout.id }}">
+    {% set pageId = this.page.id %} {% set pageTitle = this.page.title %} {% if
+    pageId is empty %} {% set pageId = page.id %} {% endif %} {% if pageTitle is
+    empty %} {% set pageTitle = page.title %} {% endif %}
+    <body class="page-{{ pageId }} layout-{{ this.layout.id }}"></body>
+</html>

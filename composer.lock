@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3788447867c7d2319efc0bd6af08e634",
+    "content-hash": "02cb3fa7d5f42e76dcd2c7b9bf2d9be3",
     "packages": [
         {
             "name": "assetic/framework",
@@ -5875,6 +5875,66 @@
             "time": "2023-12-08T13:03:43+00:00"
         },
         {
+            "name": "tinify/tinify",
+            "version": "1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tinify/tinify-php.git",
+                "reference": "1d23f5069f450dc33dd062083a825be2baed48ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tinify/tinify-php/zipball/1d23f5069f450dc33dd062083a825be2baed48ea",
+                "reference": "1d23f5069f450dc33dd062083a825be2baed48ea",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "lib-curl": ">=7.20.0",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5 || ^8.4 || ^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/Tinify.php",
+                    "lib/Tinify/Exception.php"
+                ],
+                "psr-4": {
+                    "Tinify\\": "lib/Tinify/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rolf Timmermans",
+                    "email": "rolftimmermans@voormedia.com"
+                }
+            ],
+            "description": "PHP client for the Tinify API. Tinify compresses your images intelligently. Read more at https://tinify.com.",
+            "homepage": "https://tinify.com/developers",
+            "keywords": [
+                "api",
+                "compress",
+                "images",
+                "tinify",
+                "tinyjpg",
+                "tinypng"
+            ],
+            "support": {
+                "email": "support@tinify.com",
+                "issues": "https://github.com/tinify/tinify-php/issues",
+                "source": "https://github.com/tinify/tinify-php/tree/1.6.1"
+            },
+            "time": "2023-02-21T14:51:21+00:00"
+        },
+        {
             "name": "twig/twig",
             "version": "v3.8.0",
             "source": {
@@ -6844,6 +6904,65 @@
             "time": "2024-04-03T17:29:53+00:00"
         },
         {
+            "name": "winter/wn-seo-plugin",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wintercms/wn-seo-plugin.git",
+                "reference": "0cc231de0634076274794b69fcae30a2450c6dc0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wintercms/wn-seo-plugin/zipball/0cc231de0634076274794b69fcae30a2450c6dc0",
+                "reference": "0cc231de0634076274794b69fcae30a2450c6dc0",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.11",
+                "php": ">=7.2"
+            },
+            "default-branch": true,
+            "type": "winter-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luke Towers",
+                    "email": "wintercms@luketowers.ca"
+                },
+                {
+                    "name": "Winter CMS Maintainers",
+                    "homepage": "https://wintercms.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Winter CMS plugin for managing SEO tags",
+            "homepage": "https://github.com/wintercms/wn-seo-plugin",
+            "keywords": [
+                "cms",
+                "seo",
+                "wintercms"
+            ],
+            "support": {
+                "discord": "https://discord.gg/D5MFSPH6Ux",
+                "issues": "https://github.com/wintercms/wn-seo-plugin/issues",
+                "source": "https://github.com/wintercms/wn-seo-plugin"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/wintercms",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/wintercms",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2024-02-20T16:46:22+00:00"
+        },
+        {
             "name": "winter/wn-sitemap-plugin",
             "version": "v2.0.2",
             "source": {
@@ -6987,6 +7106,67 @@
                 }
             ],
             "time": "2024-05-23T23:27:17+00:00"
+        },
+        {
+            "name": "winter/wn-tinypng-plugin",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wintercms/wn-tinypng-plugin.git",
+                "reference": "3908dbe602a922d9bfdd0700892145a9e390d4d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wintercms/wn-tinypng-plugin/zipball/3908dbe602a922d9bfdd0700892145a9e390d4d7",
+                "reference": "3908dbe602a922d9bfdd0700892145a9e390d4d7",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=7.2",
+                "tinify/tinify": "^1.5"
+            },
+            "type": "winter-plugin",
+            "extra": {
+                "installer-name": "tinypng"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luke Towers",
+                    "email": "wintercms@luketowers.ca"
+                },
+                {
+                    "name": "Winter CMS Maintainers",
+                    "homepage": "https://wintercms.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Automatically optimize resized images in Winter CMS with TinyPNG",
+            "homepage": "https://github.com/wintercms/wn-tinypng-plugin",
+            "keywords": [
+                "image optimization",
+                "laravel",
+                "tinyjpg",
+                "tinypng",
+                "winter",
+                "wintercms"
+            ],
+            "support": {
+                "discord": "https://discord.gg/D5MFSPH6Ux",
+                "issues": "https://github.com/wintercms/wn-test-plugin/issues",
+                "source": "https://github.com/wintercms/wn-test-plugin"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/LukeTowers",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-03-21T04:34:19+00:00"
         }
     ],
     "packages-dev": [
@@ -9069,7 +9249,8 @@
         "winter/storm": 20,
         "winter/wn-system-module": 20,
         "winter/wn-backend-module": 20,
-        "winter/wn-cms-module": 20
+        "winter/wn-cms-module": 20,
+        "winter/wn-seo-plugin": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
