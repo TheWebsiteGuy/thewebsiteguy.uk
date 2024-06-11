@@ -24,8 +24,7 @@ class Plugin extends PluginBase
             'name'        => 'TinyPNG',
             'description' => 'Automatically optimize resized images with TinyPNG',
             'author'      => 'Winter CMS',
-            'icon'        => 'icon-bolt',
-            'replaces'    => ['LukeTowers.TinyPNG' => '<=1.0.5'],
+            'icon'        => 'icon-bolt'
         ];
     }
 
@@ -41,7 +40,7 @@ class Plugin extends PluginBase
 
             // Process as late in the filter collection as possible to optimize the finished product
             Event::listen('system.resizer.afterResize', function ($resizer, $tempPath) {
-                $supportedExtensions = ['jpg', 'jpeg', 'png', 'webp'];
+                $supportedExtensions = ['jpg', 'jpeg', 'png'];
                 if (in_array(pathinfo($tempPath, PATHINFO_EXTENSION), $supportedExtensions)) {
                     try {
                         $source = Source::fromFile($tempPath);

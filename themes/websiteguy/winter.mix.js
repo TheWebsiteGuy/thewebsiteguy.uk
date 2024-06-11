@@ -8,10 +8,11 @@ mix.postCss('assets/styles/base.css', 'assets/styles/theme.css', [
 ]);
 
 mix.browserSync({
-  proxy: 'http://thewebsiteguy.local',
+  proxy: 'https://dev.thewebsiteguy.uk',
   open: false,
   notify: false,
   files: [
     '**/**/*.htm',
   ],
 });
+

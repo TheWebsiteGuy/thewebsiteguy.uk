@@ -2,24 +2,27 @@ title = "Contact"
 url = "/contact"
 layout = "default"
 is_hidden = 0
+meta_nofollow = 0
 
 [emptyForm contactForm]
 messages_success = "Your form was successfully submitted"
 messages_errors = "There were errors with your submission"
 mail_enabled = 1
+mail_subject = "Online Enquiry"
 mail_recipients[] = "patrick@thewebsiteguy.uk"
-inline_errors = "disabled"
+redirect = "/thanks"
+inline_errors = "display"
 sanitize_data = "disabled"
 anonymize_ip = "disabled"
 recaptcha_enabled = 1
 recaptcha_theme = "light"
 recaptcha_type = "image"
-recaptcha_size = "compact"
+recaptcha_size = "invisible"
 emails_date_format = "Y-m-d"
 ==
 <!-- Contact -->
 <div class="">
-  <div class="max-w-screen-lg px-4 xl:px-0 py-10 lg:py-20 mx-auto">
+  <div class="max-w-screen-xl px-4 xl:px-0 py-10 lg:py-20 mx-auto">
     <!-- Title -->
     <div class="max-w-3xl mb-10 lg:mb-14">
       <h2 class="text-slate-800 dark:text-slate-100 font-semibold text-2xl md:text-4xl md:leading-tight">Contact The Website Guy</h2>
@@ -153,21 +156,7 @@ emails_date_format = "Y-m-d"
       <!-- End Col -->
 
       <div class="space-y-14">
-        <!-- Item -->
-        <div class="flex gap-x-5">
-          <svg class="flex-shrink-0 size-6 text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          <div class="grow">
-            <h4 class="text-slate-800 dark:text-slate-100 font-semibold">Address:</h4>
-
-            <address class="mt-1 text-neutral-400 text-sm not-italic">
-              Falconer Road<br>
-              3 Grove Cottages <br>
-              Bushey, Herts WD23 3AE
-            </address>
-          </div>
-        </div>
-        <!-- End Item -->
-
+        
         <!-- Item -->
         <div class="flex gap-x-5">
           <svg class="flex-shrink-0 size-6 text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z"/><path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10"/></svg>
@@ -188,7 +177,7 @@ emails_date_format = "Y-m-d"
 </svg>
           <div class="grow">
             <h4 class="text-slate-800 dark:text-slate-100 font-semibold">Phone:</h4>
-            <p class="mt-1 text-neutral-400">Want to chat the old fashioned way?  </p>
+            <p class="mt-1 text-neutral-400">Prefer to talk? Let's connect at your convenience. </p>
             <p class="mt-2">
               <button
                             class="group inline-flex items-center gap-x-2 font-medium text-sm text-pink-500 decoration-2 hover:underline focus:outline-none focus:underline"
@@ -199,12 +188,27 @@ emails_date_format = "Y-m-d"
   <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"></path>
 </svg>
                             
-                            Book a call
+                            Schedule a call
                             
                         </button>
                     </p>
                     {# Modal #} {% partial 'modals/book-a-call' %}
             </p>
+          </div>
+        </div>
+        <!-- End Item -->
+        
+        <!-- Item -->
+        <div class="flex gap-x-5">
+          <svg class="flex-shrink-0 size-6 text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="grow">
+            <h4 class="text-slate-800 dark:text-slate-100 font-semibold">Address:</h4>
+
+            <address class="mt-1 text-neutral-400 text-sm not-italic">
+              Falconer Road<br>
+              3 Grove Cottages <br>
+              Bushey, Herts WD23 3AE
+            </address>
           </div>
         </div>
         <!-- End Item -->

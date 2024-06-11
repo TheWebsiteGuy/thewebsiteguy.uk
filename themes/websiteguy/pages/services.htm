@@ -1,16 +1,18 @@
----
-title = "Website Services" 
-url = "/services" 
-layout = "default" 
----
+title = "Website Services"
+url = "/services"
+layout = "default"
+is_hidden = 0
+meta_nofollow = 0
 ==
-<!-- Features -->
+<!-- Services Header -->
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
     <div class="aspect-w-16 aspect-h-5">
         <img
             class="w-full object-cover rounded-xl h-auto max-h-96"
-            src="{{'assets/images/design-illustration.jpg'|theme | resize() }}"
+            src="{{'assets/images/design-illustration.webp'|theme | resize() }}"
             alt="Design Illustration"
+            width="1280"
+            height="823"
         />
     </div>
 
@@ -111,7 +113,16 @@ layout = "default"
     </div>
     <!-- End Grid -->
 </div>
-<!-- End Features -->
+<!-- End Services -->
+
+<!-- Features -->
+<section class="bg-slate-50 dark:bg-slate-950/25 py-6">
+    <header class="text-center py-12 space-y-3">
+        <h1 class="tracking-tight font-bold text-4xl">Your Complete Website Solution!</h1>
+        <p class="max-w-3xl mx-auto">All website packages offer everything you need for a successful online presence. Cutting-edge technology, top-notch support, and a design that will make your business stand out.</p>
+    </header>
+    {% partial 'site/features' %}
+</section>
 
 <section>
     {% partial 'site/pricing' %}

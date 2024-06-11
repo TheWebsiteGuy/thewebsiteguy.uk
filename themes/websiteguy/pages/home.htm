@@ -8,11 +8,11 @@ meta_description = "UK BASED - Pay Monthly Websites with No Setup Costs... Domai
 meta_nofollow = 0
 ==
 <section class="relative flex items-center w-full ">
-  <div class="relative items-center w-full px-5 py-14 mx-auto lg:px-10 xl:py-30 max-w-7xl md:px-12">
+  <div class="relative items-center w-full px-5 py-14 mx-auto lg:px-10 xl:py-30 max-w-screen-2xl md:px-12">
     <div class="relative flex-col items-start m-auto align-middle">
       <div class="grid grid-cols-1 gap-6 lg:gap-24 lg:grid-cols-2">
         <div class="relative items-center gap-12 m-auto lg:inline-flex">
-          <div class="max-w-xl text-center lg:text-left">
+          <div class="text-center lg:text-left">
             <div class="space-y-3">
               <p class="text-4xl font-bold md:text-6xl text-slate-900 dark:text-slate-50">Have a 
                 <span class="text-pink-500">flawless website</span> for your business...
@@ -30,7 +30,7 @@ meta_nofollow = 0
 
                 <span class="ml-3 font-semibold text-lg">Get started</span></a>
               <p class="text-slate-500">
-              <button data-hs-overlay="#book-a-call" type="button" class="underline underline-offset-4 decoration-dotted dark:text-slate-200">
+              <button data-hs-overlay="#book-a-consultation" type="button" class="underline underline-offset-4 decoration-dotted dark:text-slate-200">
               
                 Book a free consultation</button>
               </p>
@@ -69,7 +69,7 @@ meta_nofollow = 0
           </div>
         </div>
         <div class="block w-full mt-12 lg:mt-0">
-          <img alt="hero" class="object-cover object-center w-full mx-auto drop-shadow-xl lg:ml-auto rounded-2xl" src="{{ 'assets/images/web-design-illustration.webp'|theme | resize(800, 697) }}" width="800" height="697" fetchpriority="high">
+          <img alt="hero" rel="preload"  class="object-cover object-center w-full mx-auto drop-shadow-xl lg:ml-auto rounded-2xl" src="{{ 'assets/images/web-design-illustration.webp'|theme | resize(800, 600, { mode: 'fit' }) }}" width="800" height="600">
         </div>
       </div>
     </div>
@@ -78,7 +78,7 @@ meta_nofollow = 0
 
 <section class="bg-slate-100 dark:bg-slate-900">
   <!-- Icon Blocks -->
-  <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <div class="max-w-screen-2xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
     <!-- Grid -->
     <div class="grid md:grid-cols-2 gap-12">
       <div class="lg:w-3/4">
@@ -165,14 +165,51 @@ meta_nofollow = 0
 </section>
 
 {# Pricing #}
-<section>
+<section class="max-w-screen-2xl mx-auto">
   {% partial 'site/pricing' %}
 </section>
 
+<!-- Testimonials -->
+<div class="relative max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Blockquote -->
+  <blockquote class="text-center lg:mx-auto lg:w-3/5">
+    
+
+    <div class="mt-6 lg:mt-10">
+      <p class="relative text-xl sm:text-2xl md:text-3xl md:leading-normal font-medium text-gray-800">
+        <svg class="absolute top-0 start-0 transform -translate-x-8 -translate-y-8 size-16 text-gray-200 sm:h-24 sm:w-24 dark:text-neutral-700" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M7.18079 9.25611C7.18079 10.0101 6.93759 10.6211 6.45119 11.0891C5.96479 11.5311 5.35039 11.7521 4.60799 11.7521C3.71199 11.7521 2.96958 11.4531 2.38078 10.8551C1.81758 10.2571 1.53598 9.39911 1.53598 8.28111C1.53598 7.08511 1.86878 5.91511 2.53438 4.77111C3.22559 3.60111 4.18559 2.67811 5.41439 2.00211L6.29759 3.36711C5.63199 3.83511 5.09439 4.35511 4.68479 4.92711C4.30079 5.49911 4.04479 6.16211 3.91679 6.91611C4.14719 6.81211 4.41599 6.76011 4.72319 6.76011C5.43999 6.76011 6.02879 6.99411 6.48959 7.46211C6.95039 7.93011 7.18079 8.52811 7.18079 9.25611ZM14.2464 9.25611C14.2464 10.0101 14.0032 10.6211 13.5168 11.0891C13.0304 11.5311 12.416 11.7521 11.6736 11.7521C10.7776 11.7521 10.0352 11.4531 9.44639 10.8551C8.88319 10.2571 8.60159 9.39911 8.60159 8.28111C8.60159 7.08511 8.93439 5.91511 9.59999 4.77111C10.2912 3.60111 11.2512 2.67811 12.48 2.00211L13.3632 3.36711C12.6976 3.83511 12.16 4.35511 11.7504 4.92711C11.3664 5.49911 11.1104 6.16211 10.9824 6.91611C11.2128 6.81211 11.4816 6.76011 11.7888 6.76011C12.5056 6.76011 13.0944 6.99411 13.5552 7.46211C14.016 7.93011 14.2464 8.52811 14.2464 9.25611Z" fill="currentColor"/>
+        </svg>
+        <span class="relative z-10 italic text-gray-800 dark:text-neutral-200">The Website Guy has completely transformed our online presence. Our traffic is up, engagement is higher, and we're seeing real results. We're so grateful for his expertise and hard work!</span>
+      </p>
+    </div>
+
+    <footer class="mt-6">
+      <div class="font-semibold text-gray-800 dark:text-neutral-200">Eileen Kilroy</div>
+      <div class="text-sm text-gray-500 dark:text-neutral-500">Solicitor | <a href="https://lancasters-solicitors.com/">Lancasters Solicitors</a></div>
+    </footer>
+  </blockquote>
+  <!-- End Blockquote -->
+</div>
+<!-- End Testimonials -->
+
+{# Portfolio #}
+<section class="py-10 bg-gradient-to-b from-white dark:from-slate-800 dark:via-pink-600/25 dark:to-slate-800 via-pink-100 to-white ">
+    <div>
+        {% partial 'carousel/portfolio.htm' %}
+    </div>
+</section>
+
 {# FAQs #}
-<section>
+<section  class="max-w-screen-2xl mx-auto">
   {% partial 'site/faq' %}
+</section>
+
+{# CTA #}
+<section>
+    {% partial 'site/cta' %}
 </section>
 
 {# Modal #} 
 {% partial 'modals/book-a-call' %}
+{% partial 'modals/book-a-consultation' %}
