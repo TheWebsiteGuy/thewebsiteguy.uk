@@ -19,6 +19,7 @@
         "ignoredPackages": []
     },
     "dependencies": {
+        "@dartmoon/aos-responsive": "^1.0.1",
         "aos": "^2.3.4",
         "preline": "^2.3.0"
     }

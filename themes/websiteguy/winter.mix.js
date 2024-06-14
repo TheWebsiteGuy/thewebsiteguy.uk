@@ -10,7 +10,7 @@ mix.postCss(
 ]);
 
 // Combine JavaScript files
-// mix.js('../../node_modules/preline/dist/preline.js', 'assets/js/app.js');  
+mix.js('assets/js/src/scripts.js', 'assets/js/dist/app.js');  
 
 mix.browserSync({
   proxy: 'https://dev.thewebsiteguy.uk',
