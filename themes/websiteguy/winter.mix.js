@@ -9,8 +9,6 @@ mix.postCss(
   require('tailwindcss'),
 ]);
 
-// Combine JavaScript files
-mix.js('assets/js/src/scripts.js', 'assets/js/dist/app.js');  
 
 mix.browserSync({
   proxy: 'https://dev.thewebsiteguy.uk',
@@ -20,3 +18,8 @@ mix.browserSync({
     '**/**/*.htm',
   ],
 });
+
+mix.js([
+  'assets/js/src/scripts.js',           
+  '../../node_modules/preline/dist/preline.js',         
+], 'assets/js/dist/app.js');     
