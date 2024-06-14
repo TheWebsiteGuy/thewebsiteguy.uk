@@ -1,6 +1,9 @@
 <script src="{{ [
-            'assets/js/preline.js',
             'assets/js/app.js',
+            '../../node_modules/aos/dist/aos.js'
         ] | theme }}"></script>
-        {% snowboard all %}
-        {% scripts %}
+{% snowboard all %} 
+{% scripts %}
+<script>
+    AOS.init();
+</script>

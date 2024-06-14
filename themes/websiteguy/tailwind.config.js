@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     '**/**/*.htm',
+    '../../node_modules/preline/dist/*.js',
   ],
   theme: {
     fontFamily: {

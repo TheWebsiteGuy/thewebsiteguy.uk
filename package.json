@@ -19,6 +19,7 @@
         "ignoredPackages": []
     },
     "dependencies": {
+        "aos": "^2.3.4",
         "preline": "^2.3.0"
     }
 }

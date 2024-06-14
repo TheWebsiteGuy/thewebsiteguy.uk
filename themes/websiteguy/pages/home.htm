@@ -68,7 +68,7 @@ meta_nofollow = 0
             </div>
           </div>
         </div>
-        <div class="block w-full mt-12 lg:mt-0">
+        <div class="block w-full mt-12 lg:mt-0" data-aos="fade-up">
           <img alt="hero" rel="preload"  class="object-cover object-center w-full mx-auto drop-shadow-xl lg:ml-auto rounded-2xl" src="{{ 'assets/images/web-design-illustration.webp'|theme | resize(800, 600, { mode: 'fit' }) }}" width="800" height="600">
         </div>
       </div>
@@ -194,20 +194,22 @@ meta_nofollow = 0
 <!-- End Testimonials -->
 
 {# Portfolio #}
-<section class="py-10 bg-gradient-to-b from-white dark:from-slate-800 dark:via-pink-600/25 dark:to-slate-800 via-pink-100 to-white ">
+<section class="py-10 bg-gradient-to-b from-white dark:from-slate-800 dark:via-pink-600/25 dark:to-slate-900 via-pink-100 to-white ">
     <div>
         {% partial 'carousel/portfolio.htm' %}
     </div>
 </section>
 
 {# FAQs #}
-<section  class="max-w-screen-2xl mx-auto">
+<section  class=" dark:bg-slate-900">
   {% partial 'site/faq' %}
 </section>
 
 {# CTA #}
-<section>
-    {% partial 'site/cta' %}
+<section class="py-10 lg:py-20 dark:bg-slate-900">
+    <div class="container mx-auto max-w-screen-lg px-3">
+        {% partial 'site/cta' %}
+    </div>
 </section>
 
 {# Modal #} 

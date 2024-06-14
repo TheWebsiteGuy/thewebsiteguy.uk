@@ -1,0 +1,97 @@
+title = "Blog Post"
+url = "/blog/post/:slug"
+layout = "default"
+is_hidden = 0
+meta_nofollow = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+<?php
+function onEnd()
+{
+    $this->title = $this->blogPost->post->title;
+    $this->page['heading'] = $this->blogPost->post->title;
+}
+?>
+==
+<section id="body" class="my-16 flex-grow">
+    <div class="container max-w-screen-2xl px-2 lg:px-6  mx-auto">
+        <div class="block lg:flex lg:flex-row ">
+            <div class="flew-grow-0 lg:w-3/4 border shadow-md rounded-xl">
+            
+                {% if post.featured_images.count %}
+                    <div class="featured-images">
+                        {% for image in post.featured_images %}
+                            <p>
+                                <img
+                                    data-src="{{ image.filename }}"
+                                    src="{{ image.path }}"
+                                    alt="{{ image.description }}"
+                                    class="max-h-96 w-full object-cover object-top rounded-t-lg" />
+                            </p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <div class="text-center">
+                    {% if post.categories|length == 0 %}
+                        <span class="text-gray-400">None</span>
+                    {% else %}
+                        <ul class="flex flex-wrap justify-center gap-6 mt-3 py-3">
+                            {% for category in post.categories %}
+                                <li class="bg-pink-600 text-white px-3 py-1 rounded-full text-xs">
+                                    <a href="{{ category.url }}">
+                                    {{ category.name }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <h2 class="font-bold text-4xl text-center pb-3 max-w-3xl mx-auto">{{ post.title }}</h2>
+                <div class="text-center flex items-center justify-center gap-2 text-xs">
+                    <span class="block text-slate-500">Published:</span>
+                    <span class="text-slate-600">{{ post.published_at | date("M d Y")}}</span>
+                </div>
+                <article class="prose max-w-none dark:text-slate-100 p-10">
+                    {{ post.content | md }}
+                </article>
+            </div>
+
+            <div class="flex-grow-0 px-8 mt-16 lg:w-1/4 lg:mt-0">
+                <div class="border shadow-md rounded-xl">
+                    <h3 class="font-bold p-3 border-b">All Topics</h3>
+                    <div class="p-3 ">
+                        {% partial 'blog/category-list' %}
+                    </div>
+                </div>
+                <div class="border shadow-md rounded-xl mt-3">
+                    <h3 class="font-bold border-b">Recent Posts</h3>
+                    <div class=" ">
+                        {% set posts = blogPosts.posts %}
+
+                        <ul class="flex flex-col space-y-3">
+                            {% for post in posts %}
+                                <li class="border-b my-3">
+                                    <h3><a href="{{ post.url }}" class="p-3 text-wrap">{{ post.title }}</a></h3>
+                                </li>
+                            {% else %}
+                                <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
+                            {% endfor %}
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
