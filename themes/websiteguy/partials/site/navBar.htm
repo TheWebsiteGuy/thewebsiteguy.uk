@@ -1,18 +1,18 @@
 [viewBag]
 ==
 <!-- ========== HEADER ========== -->
-<header class="sticky top-4 mx-auto flex flex-wrap md:justify-center md:flex-nowrap z-50 w-[95vw]">
-  <nav class="relative max-w-screen-2xl w-full bg-neutral-100/95 dark:bg-slate-700 rounded-[28px] py-3 ps-5 pe-2 md:flex md:items-center md:justify-between md:py-0 lg:mx-auto outline outline-2 outline-offset-2 outline-slate-800 dark:outline-slate-100" aria-label="Global">
-    <div class="flex items-center justify-between w-full">
+<header class="sticky top-4 mx-auto flex flex-wrap lg:justify-center lg:flex-nowrap z-50 max-w-screen-2xl px-3">
+  <nav class="relative max-w-screen-2xl w-full bg-neutral-100/95 dark:bg-slate-700 rounded-[28px] py-3 ps-5 pe-2 lg:flex lg:items-center lg:justify-between lg:py-0 lg:mx-auto outline outline-2 outline-offset-2 outline-slate-800 dark:outline-slate-100" aria-label="Global">
+    <div class="flex items-center justify-between bg-transparent">
       <!-- Logo -->
-      <a class="flex flex-row items-center rounded-md text-2xl focus:outline-none focus:opacity-80 dark:text-slate-100" href="{{'home'|page}}">
+      <a class="flex flex-row items-center rounded-lg w-40 text-2xl focus:outline-none focus:opacity-80 dark:text-slate-100" href="{{'home'|page}}">
         <img src="{{ 'assets/images/logo.webp'| theme | resize(500, 455, { mode: 'fit' } ) }}" alt="" loading="lazy" width="500" height="455" class="w-10 mr-3 dark:hidden">
         <img src="{{ 'assets/images/logo-alt.webp'| theme | resize(500, 455, { mode: 'fit' } ) }}" alt="" loading="lazy" width="500" height="455" class="w-10 mr-3 hidden dark:block">
-        <span>The <strong class="font-bold">Website</strong> Guy</span>
+        <span class="flex flex-row items-center gap-1">The <strong class="font-bold">Website</strong> Guy</span>
       </a>
       <!-- End Logo -->
 
-      <div class="md:hidden">
+      <div class="lg:hidden">
         <button type="button" class="hs-collapse-toggle size-8 flex justify-center items-center text-sm font-semibold rounded-full bg-neutral-800 text-white disabled:opacity-50 disabled:pointer-events-none" data-hs-collapse="#navbar-collapse" aria-controls="navbar-collapse" aria-label="Toggle navigation">
           <svg class="hs-collapse-open:hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
           <svg class="hs-collapse-open:block hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
@@ -21,18 +21,28 @@
     </div>
 
     <!-- Collapse -->
-    <div id="navbar-collapse" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-end py-2 md:py-0 md:ps-7 text-xl sm:text-sm font-semibold ml-3">
-        <a class="py-3 ps-px sm:px-3 md:py-4  hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="{{'home'|page}}" aria-current="page">Home</a>
-        <a class="py-3 ps-px sm:px-3 md:py-4  hover:text-neutral-300 focus:outline-none focus:text-neutral-300 " href="{{'services'|page}}" aria-current="page">Services</a>
-        {# <a class="py-3 ps-px sm:px-3 md:py-4  hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="{{'portfolio'|page}}">Portfolio</a> #}
-        {# <a class="py-3 ps-px sm:px-3 md:py-4  hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="{{'blog/index'|page}}">Blog</a> #}
-        <a class="py-3 ps-px sm:px-3 md:py-4  hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="{{'about'|page}}">About</a>
+    <div id="navbar-collapse" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow lg:block z-50">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-end py-2 lg:py-0 lg:ps-7 text-md sm:text-sm font-semibold ml-3 lg:space-x-4 xl:gap-3">
+        <a class="py-3 ps-px  lg:py-4  hover:text-pink-600 focus:outline-none focus:text-pink-600" href="{{'home'|page}}" aria-current="page">Home</a>
+        <a class="py-3 ps-px  lg:py-4  hover:text-pink-600 focus:outline-none focus:text-pink-600 " href="{{'services'|page}}" aria-current="page">Services</a>
+        {# <a class="py-3 ps-px  lg:py-4  hover:text-pink-600 focus:outline-none focus:text-pink-600" href="{{'portfolio'|page}}">Portfolio</a> #}
+        <a class="py-3 ps-px  lg:py-4  hover:text-pink-600 focus:outline-none focus:text-pink-600" href="{{'blog/index'|page}}">Blog</a>
+        <a class="py-3 ps-px  lg:py-4  hover:text-pink-600 focus:outline-none focus:text-pink-600" href="{{'about'|page}}">About</a>
 
+        
 
-        <div>
-          <a class="group inline-flex items-center mt-2 sm:mt-0 py-2 px-3 bg-white hover:bg-pink-500 transition-transform outline outline-pink-500 outline-2 font-medium text-lg sm:text-sm sm:mr-1 text-neutral-800 rounded-full w-max focus:outline-none" href="{{'contact'|page}}">
-            Contact
+        <div class="flex flex-row items-start gap-y-3 gap-x-3 text-xs">
+         <a class="group inline-flex items-center mt-2 sm:mt-0 py-2 px-3 bg-white hover:bg-pink-500 transition-transform  outline-slate-500 outline-dotted outline-2 font-medium sm:mr-1 text-neutral-800 rounded-full w-max focus:outline-none" href="{{'contact'|page}}">
+         <svg class="w-5 h-5 mr-1" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+            </svg>
+            Client Login
+          </a>
+          <a class="group inline-flex items-center mt-2 sm:mt-0 py-2 px-3 bg-pink-600 hover:bg-pink-500 transition-transform outline outline-pink-500 outline-2 font-medium  sm:mr-1 text-neutral-100 rounded-full w-max focus:outline-none" href="{{'contact'|page}}">
+          <svg class="w-5 h-5 mr-1" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"></path>
+        </svg>
+            Enquiries
           </a>
         </div>
       </div>
