@@ -11,13 +11,13 @@
 <div class="flex justify-center mb-3">
   <div id="toggle-count" class="p-0.5 inline-block bg-gray-100 rounded-lg dark:bg-slate-950">
     <label for="toggle-count-monthly" class="relative inline-block py-2 px-3 cursor-pointer">
-      <span class="inline-block relative z-10 text-sm font-medium text-gray-800 cursor-pointer dark:text-neutral-200">
+      <span class="inline-block relative z-10 text-sm font-medium text-gray-800 cursor-pointer dark:text-neutral-100">
         Monthly
       </span>
       <input id="toggle-count-monthly" name="toggle-count" type="radio" class="absolute top-0 end-0 size-full border-transparent bg-transparent bg-none text-transparent rounded-lg cursor-pointer before:absolute before:inset-0 before:size-full before:rounded-lg focus:ring-offset-0 checked:before:bg-white checked:before:shadow-sm checked:bg-none focus:ring-transparent dark:checked:before:bg-pink-800 dark:focus:ring-offset-transparent" checked>
     </label>
     <label for="toggle-count-annual" class="relative inline-block py-2 px-3">
-      <span class="inline-block relative z-10 text-sm font-medium text-gray-800 cursor-pointer dark:text-neutral-200">
+      <span class="inline-block relative z-10 text-sm font-medium text-gray-800 cursor-pointer dark:text-neutral-100">
         Annually 
       </span>
       <input id="toggle-count-annual" name="toggle-count" type="radio" class="absolute top-0 end-0 size-full border-transparent bg-transparent bg-none text-transparent rounded-lg cursor-pointer before:absolute before:inset-0 before:size-full before:rounded-lg focus:ring-offset-0 checked:before:bg-white checked:before:shadow-sm checked:bg-none focus:ring-transparent dark:checked:before:bg-pink-800 dark:focus:ring-offset-transparent">
@@ -35,14 +35,14 @@
     <!-- Card -->
     <div class="flex flex-col border border-gray-200 text-center rounded-xl p-8 dark:border-neutral-800 " data-aos="fade-up">
       
-      <h4 class="font-medium text-lg text-gray-800 dark:text-neutral-200">Basic</h4>
-      <span class="mt-5 font-bold text-5xl text-gray-800 dark:text-neutral-200 flex flex-row justify-center items-baseline gap-3">
+      <h4 class="font-medium text-lg text-gray-800 dark:text-neutral-100">Basic</h4>
+      <span class="mt-5 font-bold text-5xl text-gray-800 dark:text-neutral-100 flex flex-row justify-center items-baseline gap-3">
         <span class="font-bold text-2xl -me-2">£</span>
         <p data-hs-toggle-count='{
           "target": "#toggle-count",
           "min": 15,
           "max": 150
-        }' class="text-gray-800 font-bold text-5xl dark:text-neutral-200">
+        }' class="text-gray-800 font-bold text-5xl dark:text-neutral-100">
         15
       </p>
       </span>
@@ -140,7 +140,7 @@
             Blog/News
           </span>
         </li>
-		<li class="flex space-x-2">
+		    <li class="flex space-x-2">
          <svg class="flex-shrink-0 mt-0.5 size-4 text-red-600 dark:text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
@@ -169,21 +169,18 @@
       <a href="{{'contact'|page}}" class="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:border-pink-600 hover:text-pink-600 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:text-neutral-400 dark:hover:text-pink-500 dark:hover:border-pink-600" href="#">
         Let's talk
       </a>
-    </div>
-    <!-- End Card -->
-
     <!-- Card -->
-    <div class="flex flex-col border border-gray-200 text-center rounded-xl p-8 dark:border-neutral-800 " data-aos="fade-up" data-aos-delay="200">
-      
-      <h4 class="font-medium text-lg text-gray-800 dark:text-neutral-200">Essentials</h4>
-      <span class="mt-5 font-bold text-5xl text-gray-800 dark:text-neutral-200 flex flex-row justify-center items-baseline gap-3">
+    <div class="flex flex-col text-center border-2 border-pink-600 shadow-xl rounded-xl p-8 dark:border-pink-700  " data-aos="fade-up" data-aos-delay="200">
+      <p class="mb-3"><span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg text-xs uppercase font-semibold bg-pink-100 text-pink-800 dark:bg-pink-600 dark:text-white">Most popular</span></p>
+      <h4 class="font-medium text-lg text-gray-800 dark:text-neutral-100">Essentials</h4>
+      <span class="mt-5 font-bold text-5xl text-gray-800 dark:text-neutral-100 flex flex-row justify-center items-baseline gap-3">
         <span class="font-bold text-2xl -me-2">£</span>
         <p data-hs-toggle-count='{
           "target": "#toggle-count",
-          "min": 29,
-          "max": 290
-        }' class="text-gray-800 font-bold text-5xl dark:text-neutral-200">
-        29
+          "min": 35,
+          "max": 350
+        }' class="text-gray-800 font-bold text-5xl dark:text-neutral-100">
+        35
       </p>
       </span>
       <p class="mt-2 text-sm text-gray-500 dark:text-neutral-500">All the essentials for starting a new business</p>
@@ -199,7 +196,7 @@
         <li class="flex space-x-2">
           <svg class="flex-shrink-0 mt-0.5 size-4 text-pink-600 dark:text-pink-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           <span class="text-gray-800 dark:text-neutral-400">
-            1-5 Pages
+            1-10 Pages
           </span>
         </li>
 
@@ -278,7 +275,8 @@
             Blog/News
           </span>
         </li>
-		<li class="flex space-x-2">
+		
+    <li class="flex space-x-2">
          <svg class="flex-shrink-0 mt-0.5 size-4 text-red-600 dark:text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
@@ -311,16 +309,16 @@
     <!-- End Card -->
 
     <!-- Card -->
-    <div class="flex flex-col p-8 text-center border-2 border-pink-600 shadow-xl rounded-xl  dark:border-pink-700 " data-aos="fade-up" data-aos-delay="400">
-    	<p class="mb-3"><span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg text-xs uppercase font-semibold bg-pink-100 text-pink-800 dark:bg-pink-600 dark:text-white">Most popular</span></p>
-      <h4 class="font-medium text-lg text-gray-800 dark:text-neutral-200">Professional</h4>
-      <span class="mt-5 font-bold text-5xl text-gray-800 dark:text-neutral-200 flex flex-row justify-center items-baseline gap-3">
+    <div class="flex flex-col p-8 border border-gray-200 text-center rounded-xl p-8 dark:border-neutral-800 " data-aos="fade-up" data-aos-delay="400">
+    	
+      <h4 class="font-medium text-lg text-gray-800 dark:text-neutral-100">Professional</h4>
+      <span class="mt-5 font-bold text-5xl text-gray-800 dark:text-neutral-100 flex flex-row justify-center items-baseline gap-3">
         <span class="font-bold text-2xl -me-2">£</span>
         <p data-hs-toggle-count='{
           "target": "#toggle-count",
           "min": 59,
           "max": 590
-        }' class="text-gray-800 font-bold text-5xl dark:text-neutral-200">
+        }' class="text-gray-800 font-bold text-5xl dark:text-neutral-100">
         59
       </p>
       </span>
