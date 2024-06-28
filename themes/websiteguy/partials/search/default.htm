@@ -1,0 +1,9 @@
+{{ form_open({ action: 'search' | page, target: '_blank' }) }}
+    {% partial SELF ~ '::form' %}
+{{ form_close() }}
+
+<div id="{{ __SELF__.getId('results') }}">
+    {% if not query %}
+        {% partial SELF ~ '::no-query' %}
+    {% endif %}
+</div>

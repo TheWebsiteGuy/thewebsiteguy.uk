@@ -1,0 +1,28 @@
+title = "Search"
+url = "/search"
+layout = "default"
+is_hidden = 0
+meta_nofollow = 0
+
+[search]
+handler[] = "winterBlog"
+limit = 100
+perPage = 20
+==
+{% component 'search' %}
+
+{% set query = get('q') %}
+
+<div class="search-results">
+    <h2>Search results for "{{ query }}"</h2>
+
+    {% if results %}
+        <ul>
+            {% for result in results %}
+                <li><a href="{{ result.url }}">{{ result.title }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</div>

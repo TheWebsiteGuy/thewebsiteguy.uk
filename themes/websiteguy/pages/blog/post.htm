@@ -15,6 +15,13 @@ noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
 postPage = "blog/post"
+
+[search]
+handler[] = "winterBlog"
+handler[] = "staticPages"
+handler[] = "cmsPages"
+limit = 100
+perPage = 20
 ==
 <?php
 function onEnd()
@@ -69,29 +76,36 @@ function onEnd()
 
             <div class="flex-grow-0 px-8 mt-16 lg:w-1/4 lg:mt-0">
                 <div class="border shadow-md rounded-xl">
-                    <h3 class="font-bold p-3 border-b">All Topics</h3>
+                    <h3 class="font-bold p-3 border-b bg-pink-50 dark:bg-pink-800 rounded-t-xl">All Topics</h3>
                     <div class="p-3 ">
                         {% partial 'blog/category-list' %}
                     </div>
                 </div>
                 <div class="border shadow-md rounded-xl mt-3">
-                    <h3 class="font-bold border-b">Recent Posts</h3>
+                    <h3 class="font-bold border-b p-3 bg-pink-50 dark:bg-pink-800 rounded-t-xl">Recent Posts</h3>
                     <div class=" ">
                         {% set posts = blogPosts.posts %}
 
-                        <ul class="flex flex-col space-y-3">
+                        <ul class="flex flex-col ">
                             {% for post in posts %}
-                                <li class="border-b my-3">
-                                    <h3><a href="{{ post.url }}" class="p-3 text-wrap">{{ post.title }}</a></h3>
+                                <li class="p-3">
+                                    <h3><a href="{{ post.url }}" class="">{{ post.title }}</a></h3>
                                 </li>
                             {% else %}
                                 <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
                             {% endfor %}
                         </ul>
-
+                    </div>
+                </div>
+                <div class="border shadow-md rounded-xl mt-3">
+                    <h3 class="font-bold p-3 border-b bg-pink-50 dark:bg-pink-800 rounded-t-xl">Search</h3>
+                    <div class="p-3 ">
+                       {% component 'search' %}
                     </div>
                 </div>
             </div>
-        </div>
+
+            
+        
     </div>
 </section>

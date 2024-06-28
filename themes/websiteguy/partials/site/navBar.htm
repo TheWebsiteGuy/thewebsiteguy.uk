@@ -3,12 +3,14 @@
 <!-- ========== HEADER ========== -->
 <header class="sticky top-4 mx-auto flex flex-wrap lg:justify-center lg:flex-nowrap z-50 max-w-screen-2xl px-3">
   <nav class="relative max-w-screen-2xl w-full bg-neutral-100/95 dark:bg-slate-700 rounded-[28px] py-3 ps-5 pe-2 lg:flex lg:items-center lg:justify-between lg:py-0 lg:mx-auto outline outline-2 outline-offset-2 outline-slate-800 dark:outline-slate-100" aria-label="Global">
-    <div class="flex items-center justify-between bg-transparent">
+    <div class="flex items-center justify-between bg-transparent w-full">
       <!-- Logo -->
-      <a class="flex flex-row items-center rounded-lg w-40 text-2xl focus:outline-none focus:opacity-80 dark:text-slate-100" href="{{'home'|page}}">
-        <img src="{{ 'assets/images/logo.webp'| theme | resize(500, 455, { mode: 'fit' } ) }}" alt="" loading="lazy" width="500" height="455" class="w-10 mr-3 dark:hidden">
+      <a class=" focus:opacity-80 dark:text-slate-100" href="{{'home'|page}}">
+        <div class="flex flex-row items-center w-full text-2xl focus:outline-none">
+          <img src="{{ 'assets/images/logo.webp'| theme | resize(500, 455, { mode: 'fit' } ) }}" alt="" loading="lazy" width="500" height="455" class="w-10 mr-3 dark:hidden">
         <img src="{{ 'assets/images/logo-alt.webp'| theme | resize(500, 455, { mode: 'fit' } ) }}" alt="" loading="lazy" width="500" height="455" class="w-10 mr-3 hidden dark:block">
         <span class="flex flex-row items-center gap-1">The <strong class="font-bold">Website</strong> Guy</span>
+        </div>
       </a>
       <!-- End Logo -->
 

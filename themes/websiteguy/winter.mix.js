@@ -9,17 +9,17 @@ mix.postCss(
   require('tailwindcss'),
 ]);
 
+mix.js([
+  'assets/js/src/scripts.js',           
+  '../../node_modules/preline/dist/preline.js',         
+], 'assets/js/dist/app.js');    
 
 mix.browserSync({
   proxy: 'https://dev.thewebsiteguy.uk',
+  port: 8080,
   open: false,
   notify: false,
   files: [
     '**/**/*.htm',
   ],
 });
-
-mix.js([
-  'assets/js/src/scripts.js',           
-  '../../node_modules/preline/dist/preline.js',         
-], 'assets/js/dist/app.js');     

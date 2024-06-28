@@ -42,7 +42,8 @@
         "winter/wn-sitemap-plugin": "^2.0",
         "winter/wn-seo-plugin": "dev-main",
         "winter/wn-tinypng-plugin": "^2.0",
-        "tinify/tinify": "^1.6"
+        "tinify/tinify": "^1.6",
+        "winter/wn-search-plugin": "dev-main"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5.8",
